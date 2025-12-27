@@ -190,6 +190,12 @@
           @apply px-6 py-5 flex items-center transition-all hover:text-white font-medium h-full text-purple-100 cursor-pointer;
         }
 
+        .nav-link:focus-visible,
+        .nav-link.is-active:focus-visible,
+        .nav-link.is-home:focus-visible {
+          @apply outline-none ring-2 ring-purple-600/60 rounded-sm;
+        }
+
         .nav-link.is-active {
           @apply text-white;
         }
@@ -214,6 +220,11 @@
 
     .config-button {
       @apply rounded-sm border-0 cursor-pointer px-2.5 py-2 text-xs xl:text-sm text-purple-100 hover:bg-dark-400 hover:text-white;
+    }
+
+    .config-button:focus-visible,
+    .config-button-active:focus-visible {
+      @apply outline-none ring-2 ring-purple-600/60 rounded-sm;
     }
 
     .config-button-active {
@@ -640,6 +651,10 @@
       input {
         @apply placeholder:text-purple-100!;
       }
+
+      input:focus-visible {
+        @apply outline-none ring-2 ring-purple-600/60 rounded-sm;
+      }
     }
 
     .list {
@@ -705,6 +720,10 @@
 
       .input {
         @apply flex-1 text-lg! border-none font-medium bg-dark-400! focus-visible:ring-0 shadow-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+      }
+
+      .input:focus-visible {
+        @apply outline-none ring-2 ring-purple-600/60 rounded-md;
       }
 
       .coin-info {
